@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-button": "/components/button",
+    "van-nav-bar": "/components/nav-bar",
+    "van-cell-group": "/components/cell-group",
+    "van-field": "/components/field",
+    "van-stepper": "/components/stepper",
+    "van-cell": "/components/cell",
+    "van-datetime-picker": "/components/datetime-picker",
+    "van-popup": "/components/popup"
+  }
+}

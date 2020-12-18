@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="container_top">
+    <van-nav-bar title="商品入库" />
+  </view>
+  <view class="container_content">
+    <van-cell-group>
+      <van-field autosize size="large" label="商品条码" model:value="{{ s_id }}" placeholder="请输入条码" right-icon="scan"
+        bind:click-icon="getCode" border="{{ false }}" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-field autosize size="large" label="商品名称" model:value="{{ s_name }}" placeholder="请输入商品名称" border="{{ false }}" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-cell title="数量">
+        <van-stepper slot="" input-width="80px" model:value="{{ s_number}}" />
+      </van-cell>
+    </van-cell-group>
+    <van-cell-group>
+      <van-field autosize size="large" label="商品进价" type="number" model:value="{{ s_cost }}" placeholder="请输入商品进价"
+        border="{{ false }}" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-field autosize size="large" label="商品售价" type="number" model:value="{{ s_price }}" placeholder="请输入商品售价"
+        border="{{ false }}" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-field autosize size="large" label="日期" model:value="{{ s_date }}" placeholder="请选择日期" right-icon="calendar-o"
+        bind:click-icon="showPopup" border="{{ false }}" />
+    </van-cell-group>
+    <van-popup position="bottom" show="{{show}}">
+      <van-cell-group>
+        <van-datetime-picker type="date" value="{{ currentDate }}" min-date="{{ minDate }}"
+          formatter="{{ formatter }}"
+          bind:confirm="setDate"
+          bind:cancel="showPopup"
+           />
+      </van-cell-group>
+    </van-popup>
+
+    <view class="content_submit">
+      <van-button type="primary">提交</van-button>
+    </view>
+  </view>
+</view>

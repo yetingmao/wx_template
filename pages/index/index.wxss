@@ -1,0 +1,12 @@
+/**index.wxss**/
+.container_top{
+  width: 100%;
+}
+.container_content{
+  width: 100%; 
+}
+.content_submit{
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: center;
+}
